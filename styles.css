@@ -1,0 +1,114 @@
+:root {
+    --primary-color: #F27A1A;
+    --account-link-color: #333;
+    --account-link-hover-color: var(--primary-color);
+}
+
+html,
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.header-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+.header-links a {
+    color: #999999;
+    font-size: 12px;
+}
+.header-links a:hover {
+    color: #666666;
+}
+
+.logo-search-account-container {
+    display: grid;
+    grid-template-columns: 140px 1fr 335px;
+    margin-top: 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 42px;
+    background-color: #F3F3F3;
+    border-radius: 6px;
+    padding: 10px;
+}
+.search input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+.search button {
+    background: none;
+    border: none;
+}
+
+.account-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    font-size: 12px;
+}
+
+.account-list li a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--account-link-color);
+}
+
+.account-list li a:hover {
+    color: var(--primary-color);
+}
+
+
+.account-list li a:hover svg path {
+    fill: var(--account-link-hover-color)
+}
+
+.user-menu {
+    display: none;
+    width: 170px;
+    height: 289px;
+    padding: 15px 10px;
+    background-color: #fff;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
+}
+.account-list li:first-child {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+.account-list li:hover {
+    position: relative;
+}
+.account-list li:hover .user-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -60px;
+}
