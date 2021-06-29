@@ -89,6 +89,7 @@ ul {
     top: calc(50% - 9px);
     width: 19px;
     height: 19px;
+    cursor: pointer;
 }
 
 .account-list ul {
