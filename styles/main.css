@@ -34,6 +34,10 @@ ul {
     width: 1080px;
     margin: 0 auto;
 }
+.container-1200 {
+    width: 1080px;
+    margin: 0 auto;
+}
 
 .header-banner img {
     width: 100%;
@@ -215,6 +219,16 @@ ul {
     border-bottom: 2px solid var(--primary-color);
 }
 
-
+/* Products Page */
+.container-1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+.breadcrumb{
+    display: flex;
+    gap:15px;
+    align-items: center;
+    margin: 10px 0 15px 0;
+}
 
 
