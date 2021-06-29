@@ -221,7 +221,7 @@
                 <div class="line"></div>
 
                 <div class="opportunity-product">
-                    <p>Fırsat Ürünleri</p>
+                    <p class="filter-title">Fırsat Ürünleri</p>
                     <ul>
                         <li><input type="checkbox" name="" id=""><label for="">4 Yıldızlı Fırsat Urunleri</label></li>
                         <li><input type="checkbox" name="" id=""><label for="">3 Yıldızlı Fırsat Urunleri</label></li>
@@ -232,9 +232,9 @@
                 <div class="line"></div>
 
                 <div class="brands">
-                    <p>Marka</p>
+                    <p class="filter-title">Marka</p>
                     <input type="text" name="" placeholder="Marka Ara" id="markaAra">
-                    <ul>
+                    <ul class="filter-search-item">
                         <li><input type="checkbox" name="" id=""><label for="">TRENDYOLMİLLA</label></li>
                         <li><input type="checkbox" name="" id=""><label for="">Koton</label></li>
                         <li><input type="checkbox" name="" id=""><label for="">Defacto</label></li>
@@ -247,17 +247,38 @@
                         <li><input type="checkbox" name="" id=""><label for="">Trend Alaçatı Stili</label></li>
                     </ul>
                 </div>
+                <div class="line"></div>
+                <div class="priceSearch">
+                    <div class="price-min-max">
+                        <input type="text" name="" placeholder="En Az" id="enAz">
+                        <p>-</p>
+                        <input type="text" name="" placeholder="En Çok" id="enCok">
+                        <button><svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.7109 17.306L14.027 12.603C15.2255 11.2393 15.8879 9.48658 15.8909 7.671C15.8909 3.441 12.327 0 7.94597 0C3.56499 0 0 3.441 0 7.671C0 11.901 3.56499 15.342 7.94597 15.342C9.56845 15.3483 11.155 14.8645 12.498 13.954L17.2179 18.694C17.4149 18.891 17.6799 19 17.9639 19C18.2339 19 18.4889 18.9 18.6819 18.72C18.7796 18.6308 18.8581 18.5227 18.9127 18.4023C18.9673 18.2819 18.9969 18.1516 18.9997 18.0194C19.0025 17.8872 18.9785 17.7558 18.929 17.6332C18.8795 17.5106 18.8057 17.3993 18.7119 17.306H18.7109ZM7.94597 2.001C11.184 2.001 13.819 4.545 13.819 7.671C13.819 10.798 11.184 13.341 7.94597 13.341C4.70698 13.341 2.07299 10.798 2.07299 7.671C2.07299 4.545 4.70698 2.001 7.94597 2.001Z"
+                                    fill="white" />
+                            </svg></button>
+                    </div>
+                    <form>
+                        <ul>
+                            <li> <input type="radio" name="selection"><label for="">0 TL - 50 TL</label></li>
+                            <li> <input type="radio" name="selection"><label for="">50 TL - 70 TL</label></li>
+                            <li> <input type="radio" name="selection"><label for="">70 TL - 80 TL</label></li>
+                            <li> <input type="radio" name="selection"><label for="">80 TL - 90 TL</label></li>
+                            <li> <input type="radio" name="selection"><label for="">90 TL - 125 TL</label></li>
+                            <li> <input type="radio" name="selection"><label for="">125 TL - 4000 TL</label></li>
+                        </ul>
+                    </form>
+                </div>
 
                 <div class="line"></div>
 
-                
-
+                <div id="free-shipping"><input type="checkbox" name="" ><label for="" class="filter-title">Kargo Bedava</label></div>
             </div>
 
-            <div class="products-content">
-                asd
 
-            </div>
+            <div class="products-content" style="display: flex; justify-content: center; align-items: center; background-color: black; color: blueviolet;">BURDAN DEVAM</div>
         </div>
     </div>
 </body>

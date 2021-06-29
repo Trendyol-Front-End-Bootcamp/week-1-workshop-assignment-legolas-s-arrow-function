@@ -19,7 +19,7 @@
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  background: #e5e5e5;
+  background: white;
 }
 
 a {
@@ -358,4 +358,115 @@ ul {
   background: #ffffff;
   border: 1.5px solid #d6d6d6;
   border-radius: 2px;
+}
+
+/**
+
+
+*/
+
+.filter-title {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    
+    color: #000000;
+}
+
+.filter-search-item {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.filter-search-price-item {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+/***/
+#free-shipping {
+  display: flex;
+  gap: 12px;
+}
+
+#free-shipping input {
+  width: 21px;
+  height: 21px;
+  background: #ffffff;
+  border: 1.5px solid #d6d6d6;
+  border-radius: 2px;
+}
+
+.priceSearch form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price-min-max input {
+  padding: 6px 15px 6px 15px;
+  background: #fafafa;
+  border: 1px solid #e2e2e2;
+  border-radius: 3px;
+
+  width: 58px;
+  height: 27px;
+}
+
+.price-min-max button {
+  margin-left: 8px;
+  background: #dadada;
+  border-radius: 3px;
+  border: none;
+  padding: 4px;
+  width: 27px;
+  height: 27px;
+}
+
+.price-min-max input::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #4b4b4b;
+}
+
+.price-min-max {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 10px;
+}
+
+.priceSearch label {
+  margin-left: 13px;
+}
+
+.priceSearch form ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.priceSearch form li {
+  display: flex;
+  align-items: center;
+}
+
+.priceSearch form li input {
+  background: #ffffff;
+  border: 1.5px solid #d6d6d6;
+  width: 20px;
+  height: 20px;
 }
