@@ -7,6 +7,7 @@
     --account-item: #666;
     --account-item-hover: var(--primary-color);
     --profile-container: #E6E6E6;
+    --category-hover: #E8E8E8;
 }
 
 * {
@@ -58,6 +59,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 11px;
+    margin-bottom: 11px;
 }
 
 .search-box-container {
@@ -188,3 +191,30 @@ ul {
 .profile-name span {
     color: var(--primary-color);
 }
+
+.categories {
+    border-bottom: 1px solid var(--category-hover);
+
+}
+
+.category-list {
+    display: flex;
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+
+}
+.category-list li{
+    flex-grow: 1;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.category-list li:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+
+
