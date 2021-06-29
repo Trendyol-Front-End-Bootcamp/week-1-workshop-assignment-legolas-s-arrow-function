@@ -231,4 +231,25 @@ ul {
     margin: 10px 0 15px 0;
 }
 
+.related-product p{
+font-size: 14px;
+color:black ;
+font-weight: 600;
+line-height: 18px;
 
+
+}
+.related-product ul{
+    display: flex;
+    flex-flow: column;
+    gap:5px;
+    font-size: 13px;
+    margin: 10px 0px;
+
+}
+#more-show-button {
+    color: var(--primary-color);
+    font-weight: 600;
+    line-height: 16px;
+    font-size: 13px;
+}
