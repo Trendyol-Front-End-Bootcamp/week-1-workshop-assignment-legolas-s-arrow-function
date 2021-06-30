@@ -63,6 +63,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 40px;
     margin-top: 11px;
     margin-bottom: 11px;
 }
@@ -99,8 +100,13 @@ ul {
     cursor: pointer;
 }
 
+.account-list {
+    height: 40px;
+}
+
 .account-list ul {
     width: 290px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -109,6 +115,8 @@ ul {
     display: inline-block;
     font-size: 0.75rem;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .account-item-link {
@@ -130,17 +138,16 @@ ul {
     fill: var(--account-item-hover);
 }
 
-.account-item .profile:hover ~ div {
+.profile:hover div {
     display: block;
 }
 
-
 .profile-container {
     position: absolute;
-    top: 25px;
-    right: -47px;
+    top: 40px;
+    right: -67px;
     height: 289px;
-    width: 169px;
+    width: 196px;
     border: 1px solid var(--profile-container);
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
     border-radius: 3px;
@@ -149,6 +156,7 @@ ul {
     display: none;
 }
 
+<<<<<<< Updated upstream
 .profile-container:before {
     bottom: 100%;
     left: 57%;
@@ -171,6 +179,30 @@ ul {
     width: 0;
     position: absolute;
     pointer-events: none;
+=======
+.profile-container:after, .profile-container:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.profile-container:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.profile-container:before {
+	border-color: rgba(51, 0, 255, 0);
+	border-bottom-color: var(--profile-container);
+	border-width: 9px;
+	margin-left: -9px;
+>>>>>>> Stashed changes
 }
 
 .profile-link {
@@ -180,16 +212,21 @@ ul {
     font-size: 0.875rem;
 }
 
-.profile-link span {
-    color: var(--header-top-link);
-}
-
-.profile-link svg path {
-    fill: var(--header-top-link);
+.profile-link-item a {
+    display: flex;
+    align-items: center;
 }
 
 .profile-link-item span {
-    margin-left: 5px;
+    color: var(--header-top-link);
+}
+
+.profile-link-item svg {
+    margin-right: 10px;
+}
+
+.profile-link-item svg path {
+    fill: var(--header-top-link);
 }
 
 .profile-name span {
