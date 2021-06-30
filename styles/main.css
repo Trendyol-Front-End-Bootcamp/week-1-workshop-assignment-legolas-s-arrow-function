@@ -400,7 +400,6 @@ ul {
     background-color: black;
     transition: background-color 300ms ease-in-out;
 }
-<<<<<<< Updated upstream
 
 .component-text, .hover-text{
     display: inline-block;
@@ -412,28 +411,12 @@ ul {
     font-weight: 600;
 }
 
-
-=======
-
-.component-text, .hover-text{
-    display: inline-block;
-    padding: 0 17px;
-    color: white;
-    width: 50%;
-    font-size: 14px;
-    line-height: 38px;
-    font-weight: 600;
-}
-
-
->>>>>>> Stashed changes
 .component-text {
     text-transform: uppercase;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow:hidden
 }
-<<<<<<< Updated upstream
 
 .hover-text{
     text-align: right;
@@ -463,37 +446,6 @@ ul {
     transition: transform 700ms ease-in-out;
 }
 
-=======
-
-.hover-text{
-    text-align: right;
-    opacity: 0;
-    transition: all 300ms ease-in-out;
-}
-
-.hover-text svg{
-    margin-left: 7px;
-    line-height: 30px;
-}
-
-.component:hover .hover-text{
-    opacity: 1;
-}
-
-.component:hover .component-description{
-    background-color: var(--primary-color);
-}
-
-.component:hover {
-    border: 1px solid var(--primary-color);
-}
-
-.component:hover img{
-    transform: scale(1.015);
-    transition: transform 700ms ease-in-out;
-}
-
->>>>>>> Stashed changes
 .banners{
     width: 310px;
 }
