@@ -147,6 +147,7 @@ ul {
     top: 40px;
     right: -67px;
     height: 289px;
+    z-index: 2;
     width: 196px;
     border: 1px solid var(--profile-container);
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
@@ -225,11 +226,6 @@ ul {
     font-size: 14px;
     font-weight: 600;
     color: #333;
-    
-}
-
-.category-list > li:hover {
-    border-bottom: 2px solid var(--primary-color);
 }
 
 .category-content {
@@ -237,26 +233,38 @@ ul {
     left: 0;
     width: 100%;
     padding: 15px 18px;
-    border: 1px solid red;
     overflow: hidden;
     text-align: left;
+    display: none;
+    grid-template-columns: repeat(5, 1fr) 275px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-list > li:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.category-list > li:hover .category-content{
+  display: grid;
 }
 
 .sub-category {
-    float: left;
     width: 147px;
     margin-bottom: 10px;
-    margin-right: 25px;  
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .sub-category > a {
     font-size: 15px;
+    line-height: 15px;
     color: #333;
     font-weight: 600;
 }
 
 .sub-category li {
-    line-height: 21px;
+    line-height: 18px;
 }
 
 .sub-category li a {
@@ -272,14 +280,17 @@ ul {
 }
 
 .campaign-container {
-    float: right;
+  width: 275px;
+}
+
+.campaign-container img {
+  width: 100%;
+  
 }
 
 .campaign-container a {
-    width: 264px;
     height: 137px;
     margin-bottom: 15px;
-    border: 0.8px solid #e7e7e7;
 }
 
 
