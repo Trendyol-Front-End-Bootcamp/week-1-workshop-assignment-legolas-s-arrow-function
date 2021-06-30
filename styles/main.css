@@ -103,10 +103,45 @@ ul {
     outline: 0;
 }
 
+.search-history {
+    display: none;
+    position: absolute;
+    top: 34px;
+    width: 100%;
+    z-index: 4;
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    padding: 17px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #333;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.search-history-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.search-history-top span {
+    color: var(--primary-color);
+}
+
+.history-item {
+    margin-bottom: 5px;
+}
+
 .search-box:focus {
     border: 2px solid var(--primary-color);
-    transition: border 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }
+
+.search-box:focus ~ div {
+    display: block;
+}
+
 
 .search-button {
     border: 0;
