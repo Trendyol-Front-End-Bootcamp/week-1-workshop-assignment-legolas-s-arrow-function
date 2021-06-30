@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 
 :root {
   --primary-color: #f27a1a;
@@ -259,6 +260,8 @@ ul {
 
 /* ASD */
 .products-content {
+  margin-left: 20px;
+  margin-top: 15px;
   flex: 5;
 }
 
@@ -366,13 +369,13 @@ ul {
 */
 
 .filter-title {
-    font-family: Source Sans Pro;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
-    
-    color: #000000;
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: #000000;
 }
 
 .filter-search-item {
@@ -469,4 +472,93 @@ ul {
   border: 1.5px solid #d6d6d6;
   width: 20px;
   height: 20px;
+}
+.product-content-header {
+  display: flex;
+  justify-content: space-between;
+}
+#search-result-text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+#filter-by-feature {
+  width: 180px;
+  height: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #666666;
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  padding: 8px 10px;
+}
+.products {
+  display: flex;
+}
+.product-detail {
+  padding: 0 22px;
+}
+.product-card {
+  display: flex;
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 25%;
+  flex-direction: column;
+}
+.product-price {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #878787;
+}
+.product-title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.products-brand {
+  font-weight: 700;
+  font-size: 14px;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.rating {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 5px;
+}
+.rating p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #999999;
+}
+.product-discount-price {
+  margin-top: 10px;
+  display: flex;
+  border: 1px solid #ff671d;
+  border-radius: 3px;
+  padding: 4px 6px 3px 7px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #666666;
+}
+.cheaper-price {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 700;
 }
