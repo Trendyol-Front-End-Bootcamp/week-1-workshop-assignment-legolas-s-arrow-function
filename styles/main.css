@@ -39,6 +39,11 @@ ul {
     margin: 0 auto;
 }
 
+.header {
+    position: relative;
+    background-color: white;
+}
+
 .header-banner-container {
     display: block;
 }
@@ -77,7 +82,8 @@ ul {
     align-items: center;
     height: 40px;
     margin-top: 11px;
-    margin-bottom: 11px;
+    padding-bottom: 11px;
+    background-color: white;
 }
 
 .search-box-container {
@@ -223,6 +229,7 @@ ul {
 
 .categories {
     border-bottom: 1px solid var(--category-hover);
+    background-color: white;
 }
 
 .category-list {
@@ -248,6 +255,11 @@ ul {
   display: grid;
 }
 
+.category-list > li:hover .black-out{
+    display: block;
+    opacity: 0.9;
+}
+
 .category-content {
   position: absolute;
   left: 0;
@@ -258,8 +270,19 @@ ul {
   text-align: left;
   display: none;
   grid-template-columns: repeat(5, 1fr) 275px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+}
+
+.black-out {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: opacity 500ms ease-out;
 }
 
 .sub-category {
@@ -377,6 +400,7 @@ ul {
     background-color: black;
     transition: background-color 300ms ease-in-out;
 }
+<<<<<<< Updated upstream
 
 .component-text, .hover-text{
     display: inline-block;
@@ -389,12 +413,27 @@ ul {
 }
 
 
+=======
+
+.component-text, .hover-text{
+    display: inline-block;
+    padding: 0 17px;
+    color: white;
+    width: 50%;
+    font-size: 14px;
+    line-height: 38px;
+    font-weight: 600;
+}
+
+
+>>>>>>> Stashed changes
 .component-text {
     text-transform: uppercase;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow:hidden
 }
+<<<<<<< Updated upstream
 
 .hover-text{
     text-align: right;
@@ -424,6 +463,37 @@ ul {
     transition: transform 700ms ease-in-out;
 }
 
+=======
+
+.hover-text{
+    text-align: right;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+
+.hover-text svg{
+    margin-left: 7px;
+    line-height: 30px;
+}
+
+.component:hover .hover-text{
+    opacity: 1;
+}
+
+.component:hover .component-description{
+    background-color: var(--primary-color);
+}
+
+.component:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.component:hover img{
+    transform: scale(1.015);
+    transition: transform 700ms ease-in-out;
+}
+
+>>>>>>> Stashed changes
 .banners{
     width: 310px;
 }
@@ -452,6 +522,3 @@ ul {
     align-items: center;
     margin: 10px 0 15px 0;
 }
-
-
-
