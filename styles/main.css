@@ -498,6 +498,9 @@ ul {
 }
 .products {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
 }
 .product-detail {
   padding: 0 22px;
@@ -505,8 +508,7 @@ ul {
 .product-card {
   display: flex;
   margin-top: 20px;
-  margin-right: 20px;
-  width: 25%;
+  flex: 0 22%;
   flex-direction: column;
 }
 .product-price {
