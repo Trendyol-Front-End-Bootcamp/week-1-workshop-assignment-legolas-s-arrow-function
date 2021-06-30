@@ -258,6 +258,7 @@ ul {
   display: none;
   grid-template-columns: repeat(5, 1fr) 275px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
 .sub-category {
@@ -305,7 +306,44 @@ ul {
     margin-bottom: 15px;
 }
 
+/* STORY SECTION BEGIN*/
 
+.stories{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.story-text{
+    margin-top: 5px;
+    display: inline-block;
+    width: 75px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #333;
+    font-weight: 600;
+    height: 42px;
+    transition: color 300ms ease-in-out;
+}
+
+.story a img{
+    border-radius: 50%;
+    width: 66px;
+    border: 1px solid #e6e6e6;
+    transition: border 300ms ease-in-out;
+}
+
+.story:hover img{
+    border: 1px solid var(--primary-color);
+}
+
+.story:hover .story-text{
+    color: var(--primary-color);
+}
+
+/* STORY SECTION END */
 
 
 /* Products Page */
