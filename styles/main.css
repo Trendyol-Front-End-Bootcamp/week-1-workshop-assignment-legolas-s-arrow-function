@@ -156,30 +156,6 @@ ul {
     display: none;
 }
 
-<<<<<<< Updated upstream
-.profile-container:before {
-    bottom: 100%;
-    left: 57%;
-    border: solid transparent;
-    border-top-color: transparent;
-    border-top-width: medium;
-    border-right-color: transparent;
-    border-right-width: medium;
-    border-bottom-color: transparent;
-    border-bottom-width: medium;
-    border-left-color: transparent;
-    border-left-width: medium;
-    border-color: rgba(230, 230, 230, 0);
-    border-bottom-color: rgba(230, 230, 230, 0);
-    border-bottom-color: #e6e6e6;
-    border-width: 9px;
-    margin-left: -9px;
-    content: "";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-=======
 .profile-container:after, .profile-container:before {
 	bottom: 100%;
 	left: 50%;
@@ -202,7 +178,6 @@ ul {
 	border-bottom-color: var(--profile-container);
 	border-width: 9px;
 	margin-left: -9px;
->>>>>>> Stashed changes
 }
 
 .profile-link {
