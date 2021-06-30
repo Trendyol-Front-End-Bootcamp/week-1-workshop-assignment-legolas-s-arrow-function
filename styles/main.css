@@ -39,13 +39,17 @@ ul {
     margin: 0 auto;
 }
 
+.header-banner-container {
+    display: block;
+}
+ 
 .header-banner {
   height: 65px;
   background: linear-gradient(to right, rgb(30,223,242) 30%, rgb(9,191,223) 70%);
 }
 
 .header-banner img {
-  display: block;
+    display: block;
     margin: 0 auto;
     object-fit: contain;
 }
