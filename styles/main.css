@@ -413,6 +413,9 @@ ul {
 
 .campaign-container a {
   height: 137px;
+}
+
+.campaign-container a:first-child {
   margin-bottom: 15px;
 }
 
@@ -853,13 +856,11 @@ ul {
   flex-direction: column;
   position: relative;
   overflow: hidden;
- 
 }
 
 .product-card:hover img{
-transform: scale(1.015);
-transition: all 500ms;
-
+  transform: scale(1.015);
+  transition: all 500ms;
 }
 
 .product-price {
@@ -875,7 +876,7 @@ transition: all 500ms;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: #333333;
+  color: #333;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -900,7 +901,7 @@ transition: all 500ms;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: #999999;
+  color: #999;
 }
 
 .product-discount-price {
@@ -911,8 +912,7 @@ transition: all 500ms;
   padding: 4px 6px 3px 7px;
   font-size: 12px;
   line-height: 15px;
-  color: #666666;
-
+  color: #666;
 }
 
 .cheaper-price {
@@ -920,7 +920,6 @@ transition: all 500ms;
   font-size: 12px;
   font-family: "Oxygen", sans-serif;
   font-weight: 700;
-  
 }
 
 .wish-item{
@@ -936,7 +935,6 @@ transition: all 500ms;
   top:10px;
   right:11px;
   z-index: 1;
-
 }
 
 .wish-item:hover svg path{
