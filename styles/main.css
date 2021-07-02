@@ -142,7 +142,6 @@ ul {
   border: 2px solid var(--clr-orange);
   padding: 17px;
   font-size: 12px;
-  line-height: 15px;
   color: var(--title-link);
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -600,13 +599,29 @@ ul {
 /* Banners End */
 /* COMPONENT BANNER SECTION ENDS */
 
-/* Products Page */
-
+/*
+  ========================================
+  Product Page
+  ========================================
+*/
+.flexbox-content-container {
+  display: flex;
+}
 .breadcrumb {
   display: flex;
   gap: 15px;
   align-items: center;
   margin: 10px 0 15px 0;
+}
+aside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+aside a:hover {
+  color: var(--filter-item-hover);
 }
 
 .related-product p {
@@ -624,8 +639,6 @@ ul {
   margin: 10px 0px;
 }
 
-
-
 #more-show-button {
   color: var(--clr-orange);
   font-weight: 600;
@@ -637,33 +650,9 @@ ul {
   background: var(--filter-divider);
   height: 1px;
 }
-
-.flexbox-content-container {
-  display: flex;
-}
-
-/* ASD */
-.products-content {
-  margin-left: 20px;
-  margin-top: 15px;
-  flex: 5;
-}
-
-.filter-sidebar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.filter-sidebar a:hover {
-  color: var(--filter-item-hover);
-}
-
 .opportunity-product label {
   margin-left: 7px;
   font-size: 13px;
-  line-height: 16px;
 }
 
 .opportunity-product li {
@@ -672,67 +661,69 @@ ul {
   margin-top: 10px;
 }
 
-.opportunity-product input {
+.opportunity-product input, .filter-brands input, .free-shipping input  {
   width: 21px;
   height: 21px;
-  border-radius: 2px;
+}
+.opportunity-product p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
 }
 
-.brands ul {
+.filter-brands ul {
   overflow-y: scroll;
   height: 188px;
   scrollbar-width: thin;
   scrollbar-color: #888888 #f1f1f1;
 }
+.filter-brands p{
+  font-weight: 600;
+  font-size: 14px;
+}
 
-.brands ul::-webkit-scrollbar {
+.filter-brands ul::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-.brands ul::-webkit-scrollbar-button {
+.filter-brands ul::-webkit-scrollbar-button {
   width: 0px;
   height: 0px;
 }
 
-.brands ul::-webkit-scrollbar-thumb {
+.filter-brands ul::-webkit-scrollbar-thumb {
   background: var(--thum-background);
   border: 100px none var(--clr-white);
   border-radius: 100px;
 }
 
-.brands ul::-webkit-scrollbar-thumb:hover,
-.brands ul::-webkit-scrollbar-thumb:active
+.filter-brands ul::-webkit-scrollbar-thumb:hover,
+.filter-brands ul::-webkit-scrollbar-thumb:active
 {
   background: var(--clr-gray-4);
 }
 
-.brands li {
+.filter-brands li {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
 
-.brands label {
+.filter-brands label {
   margin-left: 7px;
   font-size: 13px;
   line-height: 16px;
 }
 
-#markaAra {
+#search-brand-button {
   background: var(--input-background);
   padding: 6px 10px 6px 10px;
   border: 1px solid var(--clr-gray-1);
   border-radius: 3px;
   width: 100%;
   height: 27px;
-  margin: 10px 0;
-}
-
-.filter-title {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 18px;
+  margin-top: 10px;
 }
 
 .filter-search-item {
@@ -745,15 +736,13 @@ ul {
   line-height: 15px;
 }
 
-#free-shipping {
+.free-shipping {
   display: flex;
   gap: 12px;
 }
-
-#free-shipping input {
-  width: 21px;
-  height: 21px;
-  border-radius: 2px;
+.free-shipping label{
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .priceSearch form {
@@ -827,7 +816,7 @@ ul {
   line-height: 18px;
 }
 
-#filter-by-feature {
+.product-content-header select {
   width: 180px;
   height: 30px;
   font-size: 12px;
@@ -837,6 +826,11 @@ ul {
   padding: 8px 10px;
 }
 
+main {
+  margin-left: 20px;
+  margin-top: 15px;
+  flex: 5;
+}
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -879,10 +873,8 @@ ul {
 }
 
 .product-title {
-  font-style: normal;
-  font-weight: normal;
+
   font-size: 14px;
-  line-height: 18px;
   color: var(--clr-gray-5);
   margin-top: 10px;
   margin-bottom: 5px;
@@ -904,10 +896,7 @@ ul {
 }
 
 .rating p {
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
-  line-height: 18px;
   color: var(--clr-gray-2);
 }
 
@@ -918,7 +907,6 @@ ul {
   border-radius: 3px;
   padding: 4px 6px 3px 7px;
   font-size: 12px;
-  line-height: 15px;
   color: var(--clr-gray-4);
 }
 
