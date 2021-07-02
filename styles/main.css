@@ -1,32 +1,9 @@
-/*
-  ========================================
-  1- Fonts
-  ========================================
-*/
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+@import url(_variables.css);
 
 /*
   ========================================
-  2- Variables
-  ========================================
-*/
-
-:root {
-  --primary-color: #f27a1a;
-  --header-top-link: #999;
-  --header-top-link-hover: #666;
-  --account-item: #666;
-  --account-item-hover: var(--primary-color);
-  --profile-container: #e6e6e6;
-  --category-hover: #e8e8e8;
-  --background-all-site: #e5e5e5;
-}
-
-/*
-  ========================================
-  3- Basic Resets
+  1- Basic Resets
   ========================================
 */
 
@@ -37,15 +14,15 @@
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  background: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  background: var(--clr-white);
   padding-bottom: 200px;
 }
 
 a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: var(--clr-black);
 }
 
 ul {
@@ -54,7 +31,7 @@ ul {
 
 /*
   ========================================
-  4- Containers
+  2- Containers
   ========================================
 */
 
@@ -70,22 +47,22 @@ ul {
 
 /*
   ========================================
-  5- Page Header
+  3- Page Header
   ========================================
 */
 
 .page-header {
-  z-index: 6;
+  z-index: var(--header-layer);
   position: relative;
-  background-color: white;
+  background-color: var(--clr-white);
 }
 
-/* 5.1- Header Banner */
+/* 3.1- Header Banner */
  
 .header-banner {
   height: 65px;
   width: 100%;
-  background: linear-gradient(to right, rgb(30,223,242) 30%, rgb(9,191,223) 70%);
+  background: linear-gradient(to right, var(--clr-light-blue) 30%, var(--clr-blue) 70%);
 }
 
 .header-banner a {
@@ -99,7 +76,7 @@ ul {
   object-fit: contain;
 }
 
-/* 5.2- Header Main */
+/* 3.2- Header Main */
 
 .header-links {
   display: flex;
@@ -110,11 +87,11 @@ ul {
 
 .header-links a {
   font-size: 0.75rem;
-  color: var(--header-top-link);
+  color: var(--header-link);
 }
 
 .header-links a:hover {
-  color: var(--header-top-link-hover);
+  color: var(--header-link-hover);
 }
 
 .header-content {
@@ -124,15 +101,15 @@ ul {
   height: 40px;
   margin-top: 11px;
   padding-bottom: 11px;
-  background-color: white;
+  background-color: var(--clr-white);
 }
 
-/* 5.2.1- Search Box */
+/* 3.2.1- Search Box */
 
 .search-area {
   width: 600px;
-  color: #333;
-  background-color: #f3f3f3;
+  color: var(--placeholder);
+  background-color: var(--clr-gray-0);
   position: relative;
   border-radius: 6px;
 }
@@ -147,8 +124,8 @@ ul {
 }
 
 .search-box:focus {
-  border: 2px solid var(--primary-color);
-  transition: all 300ms ease-in-out;
+  border: 2px solid var(--border);
+  transition: border 300ms ease-in-out;
 }
 
 .search-box:focus + .search-history {
@@ -160,13 +137,13 @@ ul {
   position: absolute;
   top: 34px;
   width: 100%;
-  z-index: 10;
-  background-color: white;
-  border: 2px solid var(--primary-color);
+  z-index: var(--history-layer);
+  background-color: var(--clr-white);
+  border: 2px solid var(--clr-orange);
   padding: 17px;
   font-size: 12px;
   line-height: 15px;
-  color: #333;
+  color: var(--title-link);
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
 }
@@ -178,7 +155,7 @@ ul {
 }
 
 .search-history-top span {
-  color: var(--primary-color);
+  color: var(--clr-orange);
 }
 
 .history-item {
@@ -195,7 +172,7 @@ ul {
   cursor: pointer;
 }
 
-/* 5.2.2- Account List */
+/* 3.2.2- Account List */
 
 .account-nav {
   height: 40px;
@@ -234,7 +211,7 @@ ul {
   fill: var(--account-item-hover);
 }
 
-/* 5.2.3- Account List */
+/* 3.2.3- Account List */
 
 .profile:hover div {
   display: block;
@@ -245,13 +222,13 @@ ul {
   top: 40px;
   right: -67px;
   height: 289px;
-  z-index: 15;
+  z-index: var(--account-layer);
   width: 196px;
   border: 1px solid var(--profile-container);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 3px 10px var(--shadow-medium);
   border-radius: 3px;
   padding: 16px 11px;
-  background-color: white;
+  background-color: var(--clr-white);
   display: none;
 }
 
@@ -268,8 +245,8 @@ ul {
 }
 
 .profile-container:after {
-	border-color: rgba(255, 255, 255, 0);
-	border-bottom-color: #ffffff;
+	border-color: transparent;
+	border-bottom-color: var(--clr-white);
 	border-width: 8px;
 	margin-left: -8px;
 }
@@ -294,7 +271,7 @@ ul {
 }
 
 .profile-link-item span {
-  color: var(--header-top-link);
+  color: var(--header-link);
 }
 
 .profile-link-item svg {
@@ -302,22 +279,22 @@ ul {
 }
 
 .profile-link-item svg path {
-  fill: var(--header-top-link);
+  fill: var(--header-link);
 }
 
 .profile-name span {
-  color: var(--primary-color);
+  color: var(--clr-orange);
 }
 
 /*
   ========================================
-  6- Categories
+  4- Categories
   ========================================
 */
 
 .categories {
-  border-bottom: 1px solid var(--category-hover);
-  background-color: white;
+  border-bottom: 1px solid var(--header-divider);
+  background-color: var(--clr-white);
 }
 
 .category-list {
@@ -332,11 +309,11 @@ ul {
   flex-grow: 1;
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: var(--title-link);
 }
 
 .category-list > li:hover {
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--clr-orange);
 }
 
 .category-list > li:hover .category-content{
@@ -356,10 +333,10 @@ ul {
   padding: 15px 18px;
   overflow: hidden;
   text-align: left;
-  z-index: 20;
+  z-index: var(--header-layer);
   display: none;
   grid-template-columns: repeat(5, 1fr) 275px;
-  background-color: #fff;
+  background-color: var(--clr-white);
 }
 
 /* Category Item Start*/
@@ -374,7 +351,7 @@ ul {
 .sub-category > a {
   font-size: 15px;
   line-height: 15px;
-  color: #333;
+  color: var(--title-link);
   font-weight: 600;
 }
 
@@ -385,12 +362,12 @@ ul {
 .sub-category li a {
   font-weight: normal;
   font-size: 13px;
-  color: #666;
+  color: var(--sub-link);
 }
 
 .sub-category a:hover {
   border: none;
-  color: var(--primary-color);
+  color: var(--clr-orange);
   text-decoration: underline;
 }
 
@@ -422,14 +399,19 @@ ul {
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 2;
+  z-index: var(--blackout-layer);
   opacity: 0;
   pointer-events: none;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--blackout);
   transition: opacity 500ms ease-out;
 }
 
-/* STORY SECTION BEGINS*/
+
+/*
+  ========================================
+  5- STORY SECTION BEGIN
+  ========================================
+*/
 
 .stories{
   display: flex;
@@ -444,7 +426,7 @@ ul {
   width: 75px;
   font-size: 14px;
   line-height: 14px;
-  color: #333;
+  color: var(--title-link);
   font-weight: 600;
   height: 42px;
   transition: color 300ms ease-in-out;
@@ -453,25 +435,29 @@ ul {
 .story a img{
   border-radius: 50%;
   width: 66px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--story-border);
   transition: border 300ms ease-in-out;
 }
 
 .story:hover img{
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--clr-orange);
 }
 
 .story:hover .story-text{
-  color: var(--primary-color);
+  color: var(--clr-orange);
 }
 
 /* STORY SECTION ENDS */
 
 
-/* COMPONENT BANNER SECTION STARTS*/
+/*
+  ========================================
+  6- COMPONENT BANNER SECTION BEGIN
+  ========================================
+*/
 
 
-/* Components Start */
+/* 6.1 Components Start */
 .component-banner-container{
   display: flex;
   gap:20px;
@@ -485,7 +471,7 @@ ul {
   border-radius: 6px;
   margin-bottom: 15px;
   overflow: hidden;
-  box-shadow: 0 0 7px #d3d3d3;
+  box-shadow: 0 0 7px var(--shadow-light);
 }
 
 .component-img{
@@ -498,14 +484,14 @@ ul {
 .component-description{
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: var(--clr-black);
   transition: background-color 300ms ease-in-out;
 }
 
 .component-text, .hover-text{
   display: inline-block;
   padding: 0 17px;
-  color: white;
+  color: var(--clr-white);
   width: 50%;
   font-size: 14px;
   line-height: 38px;
@@ -522,7 +508,7 @@ ul {
 .hover-text{
   text-align: right;
   opacity: 0;
-  transition: all 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
 }
 
 .hover-text svg{
@@ -535,11 +521,11 @@ ul {
 }
 
 .component:hover .component-description{
-  background-color: var(--primary-color);
+  background-color: var(--clr-orange);
 }
 
 .component:hover {
-  box-shadow: 0 0 0 1pt var(--primary-color);
+  box-shadow: 0 0 0 1pt var(--clr-orange);
 }
 
 .component:hover img{
@@ -548,7 +534,7 @@ ul {
 }
 /* Components End */
 
-/* Banners Start */
+/* 6Banners Start */
 .banners{
   width: 310px;
 }
@@ -562,20 +548,20 @@ ul {
   border-radius: 6px;
   display: block;
   height: 304px;
-  background-image: url(https://cdn.dsmcdn.com//mrktng/crm/rightBnr/jun/28/imgs/yaz.png);
+  background-image: var(--banner-img);
 }
 
 .banner-img {
   position: absolute;
   top: 81px;
   left: 28px;
-  z-index: -1;
+  z-index: var(--banner-layer);
   width: 140px;
   
 }
 
 .banner-info {
-  color: white;
+  color: var(--clr-white);
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -625,7 +611,7 @@ ul {
 
 .related-product p {
   font-size: 14px;
-  color: black;
+  color: var(--clr-black);
   font-weight: 600;
   line-height: 18px;
 }
@@ -641,14 +627,14 @@ ul {
 
 
 #more-show-button {
-  color: var(--primary-color);
+  color: var(--clr-orange);
   font-weight: 600;
   line-height: 16px;
   font-size: 13px;
 }
 
 .line {
-  background: #ececec;
+  background: var(--filter-divider);
   height: 1px;
 }
 
@@ -671,7 +657,7 @@ ul {
 }
 
 .filter-sidebar a:hover {
-  color: #999;
+  color: var(--filter-item-hover);
 }
 
 .opportunity-product label {
@@ -689,8 +675,6 @@ ul {
 .opportunity-product input {
   width: 21px;
   height: 21px;
-  background: #ffffff;
-  border: 1.5px solid #d6d6d6;
   border-radius: 2px;
 }
 
@@ -712,35 +696,15 @@ ul {
 }
 
 .brands ul::-webkit-scrollbar-thumb {
-  background: #888888;
-  border: 100px none #ffffff;
+  background: var(--thum-background);
+  border: 100px none var(--clr-white);
   border-radius: 100px;
 }
 
-.brands ul::-webkit-scrollbar-thumb:hover {
-  background: #696969;
-}
-
-.brands ul::-webkit-scrollbar-thumb:active {
-  background: #696969;
-}
-
-.brands ul::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border: 100px none #ffffff;
-  border-radius: 100px;
-}
-
-.brands ul::-webkit-scrollbar-track:hover {
-  background: #f1f1f1;
-}
-
-.brands ul::-webkit-scrollbar-track:active {
-  background: #f1f1f1;
-}
-
-.brands ul::-webkit-scrollbar-corner {
-  background: transparent;
+.brands ul::-webkit-scrollbar-thumb:hover,
+.brands ul::-webkit-scrollbar-thumb:active
+{
+  background: var(--clr-gray-4);
 }
 
 .brands li {
@@ -756,57 +720,31 @@ ul {
 }
 
 #markaAra {
-  background: #fafafa;
+  background: var(--input-background);
   padding: 6px 10px 6px 10px;
-  border: 1px solid #e2e2e2;
+  border: 1px solid var(--clr-gray-1);
   border-radius: 3px;
   width: 100%;
   height: 27px;
   margin: 10px 0;
 }
 
-.brands input {
-  width: 21px;
-  height: 21px;
-  background: #ffffff;
-  border: 1.5px solid #d6d6d6;
-  border-radius: 2px;
-}
-
-/**
-
-
-*/
-
 .filter-title {
-  font-family: Source Sans Pro;
-  font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
-
-  color: #000000;
 }
 
 .filter-search-item {
-  font-family: Source Sans Pro;
-  font-style: normal;
-  font-weight: normal;
   font-size: 13px;
   line-height: 16px;
-  color: #000000;
 }
 
 .filter-search-price-item {
-  font-family: Source Sans Pro;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  color: #000000;
 }
 
-/***/
 #free-shipping {
   display: flex;
   gap: 12px;
@@ -815,8 +753,6 @@ ul {
 #free-shipping input {
   width: 21px;
   height: 21px;
-  background: #ffffff;
-  border: 1.5px solid #d6d6d6;
   border-radius: 2px;
 }
 
@@ -828,8 +764,8 @@ ul {
 
 .price-min-max input {
   padding: 6px 8px;
-  background: #fafafa;
-  border: 1px solid #e2e2e2;
+  background: var(--input-background);
+  border: 1px solid var(--clr-gray-1);
   border-radius: 3px;
   width: 58px;
   height: 27px;
@@ -838,7 +774,7 @@ ul {
 
 .price-min-max button {
   margin-left: 8px;
-  background: #dadada;
+  background: var(--clr-gray-1);
   border-radius: 3px;
   border: none;
   padding: 4px;
@@ -848,8 +784,7 @@ ul {
 
 .price-min-max input::placeholder {
   line-height: 15px;
-  color: #4b4b4b;
-  
+  color: var(--placeholder);
 }
 
 .price-min-max {
@@ -877,8 +812,6 @@ ul {
 }
 
 .priceSearch form li input {
-  background: #ffffff;
-  border: 1.5px solid #d6d6d6;
   width: 20px;
   height: 20px;
 }
@@ -887,23 +820,20 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+
 #search-result-text {
-  font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
-  color: #000000;
 }
+
 #filter-by-feature {
   width: 180px;
   height: 30px;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  color: #666666;
-  background: #ffffff;
-  border: 1px solid #e2e2e2;
+  color: var(--clr-medium-gray);
+  border: 1px solid var(--clr-gray-1);
   padding: 8px 10px;
 }
 
@@ -927,8 +857,9 @@ ul {
 }
 
 .product-card img {
-  transition: transform 0.5s ease;
+  transition: transform 500ms;
 }
+
 .product-image {
   overflow: hidden;
   height: 350px;
@@ -936,7 +867,7 @@ ul {
 
 .product-card:hover img{
   transform: scale(1.03);
-  transition: all 500ms;
+  transition: transform 500ms;
 }
 
 .product-price {
@@ -944,7 +875,7 @@ ul {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: #878787;
+  color: var(--clr-gray-2);
 }
 
 .product-title {
@@ -952,7 +883,7 @@ ul {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: #333;
+  color: var(--clr-gray-5);
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -960,7 +891,7 @@ ul {
 .products-brand {
   font-weight: 700;
   font-size: 14px;
-  color: #333;
+  color: var(--clr-gray-5);
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -977,22 +908,22 @@ ul {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: #999;
+  color: var(--clr-gray-2);
 }
 
 .product-discount-price {
   margin-top: 10px;
   display: flex;
-  border: 1px solid #ff671d;
+  border: 1px solid var(--border);
   border-radius: 3px;
   padding: 4px 6px 3px 7px;
   font-size: 12px;
   line-height: 15px;
-  color: #666;
+  color: var(--clr-gray-4);
 }
 
 .cheaper-price {
-  color: var(--primary-color);
+  color: var(--clr-orange);
   font-size: 12px;
   font-family: "Oxygen", sans-serif;
   font-weight: 700;
@@ -1001,18 +932,18 @@ ul {
 .wish-item{
   width: 42px;
   height: 42px;
-  background: #FFFFFF;
+  background: var(--clr-white);
   border-radius: 50%;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 1px 4px var(--shadow-dark);
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: absolute;
   top:10px;
   right:11px;
-  z-index: 1;
+  z-index: var(--wish-item-icon);
 }
 
 .wish-item:hover svg path{
-  stroke: var(--primary-color);
+  stroke: var(--clr-orange);
 }
